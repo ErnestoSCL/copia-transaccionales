@@ -146,6 +146,7 @@ export class CrearPublicacionComponent implements OnInit {
           this.publicacionService.setPublicacionActual(nuevaPublicacion);
           this.limpiar_pub();
           console.log('Publicación creada:', nuevaPublicacion);
+          console.log('IMAGEN: ',nuevaPublicacion.imagen)
         }
         reader.readAsDataURL(this.selectedFile);
       } else {  // Si no se ha seleccionado un archivo, guarda la publicación sin imagen
@@ -153,11 +154,11 @@ export class CrearPublicacionComponent implements OnInit {
         this.publicacionService.setPublicacionActual(nuevaPublicacion);
         this.limpiar_pub();
         console.log('Publicación creada:', nuevaPublicacion);
+  
       }
     } else {
       this.mostrarAdvertenciaContenido = true;
     }
   }
-  
   
 }
